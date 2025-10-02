@@ -72,7 +72,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: geospatial-utils/output/
+          path: geospatial-utils/geospatial-utils/output/
 
       - name: Deploy to GitHub Pages
         id: deployment
