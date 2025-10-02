@@ -1,0 +1,79 @@
+name: Publish ED-318
+
+on:
+  workflow_dispatch: {}
+
+env:
+    ED269_URL: https://data.geo.admin.ch/ch.bazl.einschraenkungen-drohnen/einschraenkungen-drohnen/einschraenkungen-drohnen_4326.json
+    ED318_FILENAME: ed318.json
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  convert-with-geospatial-utils:
+    name: Convert to ED318 using geospatial-utils
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout geospatial-utils
+        uses: actions/checkout@v4
+        with:
+          path: geoawareness-cis
+
+      - name: Checkout geospatial-utils
+        uses: actions/checkout@v4
+        with:
+          repository: interuss/geospatial-utils
+          submodules: 'recursive'
+          path: geospatial-utils
+
+      - name: Set permissions on file system
+        run: mkdir .cache && mkdir output && chmod -R 755 .cache && chmod -R 755 output
+        working-directory: geospatial-utils/geospatial-utils
+
+      - name: Convert FOCA ED269 to ED318
+        run: ./run_locally.sh convert "${ED269_URL}" output/"${ED318_FILENAME}"
+        working-directory: geospatial-utils/geospatial-utils
+
+      - name: Copy Skyguide dataset
+        run: cp skyguide/skyguide_ed318.json ../geospatial-utils/geospatial-utils/output/
+        working-directory: geoawareness-cis
+
+      - name: Write simple report
+        run: |
+          echo "<html><h1>ED269 to ED318</h1><h2>FOCA</h2><ul><li>Source (downloaded at $(date +%Y-%m-%dT%H:%M:%S)): <a href=\"${ED269_URL}\">${ED269_URL}</a></li><li>Output (ED318): <a href=\"${ED318_FILENAME}\">${ED318_FILENAME}</a></li></ul><small>Generated with <a href=\"https://github.com/interuss/geospatial-utils\">interuss/geospatial-utils</a><hr><h2>Skyguide</h2><ul><li><a href="skyguide_ed318.json">skyguide_ed318.json</a></li></ul>" > ./output/index.html
+        working-directory: geospatial-utils/geospatial-utils
+
+      - name: Save output
+        uses: actions/upload-artifact@v4
+        with:
+          name: geospatial-utils-output
+          path: |
+            output/**
+          working-directory: geospatial-utils/geospatial-utils
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: geospatial-utils/output/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
