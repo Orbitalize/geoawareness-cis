@@ -1,0 +1,14 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "provider": [
+      {"lang": "de-CH", "text": "Skyguide"},
+      {"lang": "fr-CH", "text": "Skyguide"},
+      {"lang": "it-CH", "text": "Skyguide"},
+      {"lang": "en-GB", "text": "Skyguide"}
+    ],
+    "issued": "2025-10-02T00:00:00.000000Z"
+  },
+  "features": [],
+  "otherGeoid": "LN02"
+}
