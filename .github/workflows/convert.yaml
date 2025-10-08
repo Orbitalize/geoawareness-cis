@@ -8,6 +8,7 @@ env:
     ED269_FILENAME: ed269_source.json
     ED318_FILENAME: ed318.json
     ED318_SKYGUIDE_FILENAME: skyguide_ed318.json
+    GEOSPATIAL_UTILS_VERSION: v0.1.0
 
 permissions:
   contents: read
@@ -31,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout geospatial-utils
+      - name: Checkout geoawareness-cis
         uses: actions/checkout@v4
         with:
           path: geoawareness-cis
@@ -42,6 +43,7 @@ jobs:
           repository: interuss/geospatial-utils
           submodules: 'recursive'
           path: geospatial-utils
+          ref: ${{ env.GEOSPATIAL_UTILS_VERSION }}
 
       - name: Set permissions on file system
         run: mkdir .cache && mkdir output && chmod -R 755 .cache && chmod -R 755 output
