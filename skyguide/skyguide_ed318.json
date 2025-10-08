@@ -1,14 +1,372 @@
 {
-  "type": "FeatureCollection",
-  "metadata": {
-    "provider": [
-      {"lang": "de-CH", "text": "Skyguide"},
-      {"lang": "fr-CH", "text": "Skyguide"},
-      {"lang": "it-CH", "text": "Skyguide"},
-      {"lang": "en-GB", "text": "Skyguide"}
-    ],
-    "issued": "2025-10-02T00:00:00.000000Z"
-  },
-  "features": [],
-  "otherGeoid": "LN02"
+    "type": "FeatureCollection",
+    "metadata": {
+        "provider": [
+            {
+                "lang": "de-CH",
+                "text": "Skyguide"
+            },
+            {
+                "lang": "fr-CH",
+                "text": "Skyguide"
+            },
+            {
+                "lang": "it-CH",
+                "text": "Skyguide"
+            },
+            {
+                "lang": "en-GB",
+                "text": "Skyguide"
+            }
+        ],
+        "issued": "2025-10-02T00:00:00.000000Z"
+    },
+    "otherGeoid": "LN02",
+    "features": [
+        {
+            "id": "f375969d-b4f8-48b9-802a-e6b50f887989",
+            "type": "Feature",
+            "properties": {
+                "identifier": "f375969d-b4f8-48b9-802a-e6b50f887989",
+                "country": "CHE",
+                "name": [
+                    {
+                        "text": "CTR DUEBENDORF",
+                        "lang": "en-GB"
+                    }
+                ],
+                "type": "REQ_AUTHORIZATION",
+                "variant": "COMMON",
+                "message": [
+                        {
+                            "lang": "de-CH",
+                            "text": "Der Betrieb von unbemannten Luftfahrzeugen mit einem Gewicht von mehr als 250 g ist ab einer Höhe von 120 m über Grund nur mit Ausnahmebewilligung erlaubt."
+                        },
+                        {
+                            "lang": "fr-CH",
+                            "text": "L'exploitation d'aéronefs sans occupants d'un poids supérieur à 250 g n'est autorisée que avec une autorisation exceptionnelle à partir d'une hauteur de 120 m audessus du sol."
+                        },
+                        {
+                            "lang": "it-CH",
+                            "text": "L’esercizio di aeromobili senza occupanti di peso superiore a 250 g è consentito a partire da un’altezza di 120 m sopra il suolo solo con permesso d’esenzione."
+                        },
+                        {
+                            "lang": "en-GB",
+                            "text": "The operation of unmanned aircraft weighing more than 250 g is only permitted from an altitude of 120 m above ground with exemption permit."
+                        }
+                ],
+                "reason": [
+                    "AIR_TRAFFIC"
+                ],
+                "zoneAuthority": [
+                    {
+                        "name": [
+                            {
+                                "text": "Skyguide",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "service": [
+                            {
+                                "text": "Skyguide Special Flight Office",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "contactName": [
+                            {
+                                "text": "",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "siteURL": "https://skyguide.ch/services/special-flights",
+                        "purpose": "AUTHORIZATION"
+                    }
+                ],
+                "extendedProperties": {
+                    "addInfoText": [
+                        {
+                            "lang": "de-CH",
+                            "text": "Ausnahmebewilligungen können bei der zuständigen Stelle beantragt werden."
+                        },
+                        {
+                            "lang": "fr-CH",
+                            "text": "Des autorisations exceptionnelles peuvent être demandées auprès de l’autorité compétente."
+                        },
+                        {
+                            "lang": "it-CH",
+                            "text": "I permessi d’esenzione possono essere richiesti all’autorità competente."
+                        },
+                        {
+                            "lang": "en-GB",
+                            "text": "Exemption permits may be applied for at the competent authority."
+                        }
+                    ]
+                },
+                "limitedApplicability": [
+                    {
+                        "startDateTime": "2025-10-01T00:00:00Z",
+                        "endDateTime": ""
+                    }
+                ],
+                "layer": {
+                    "upper": 99999,
+                    "upperReference": "AGL",
+                    "lower": 120,
+                    "lowerReference": "AGL",
+                    "uom": "m"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            8.5694444444,
+                            47.3194444444
+                        ],
+                        [
+                            8.5894444444,
+                            47.2930555556
+                        ],
+                        [
+                            8.68819883931167,
+                            47.29073698973142
+                        ],
+                        [
+                            8.7869444444,
+                            47.2883333333
+                        ],
+                        [
+                            8.8088888889,
+                            47.3347222222
+                        ],
+                        [
+                            8.832777777800002,
+                            47.3844444444
+                        ],
+                        [
+                            8.8591666667,
+                            47.4397222222
+                        ],
+                        [
+                            8.7594444444,
+                            47.4611111111
+                        ],
+                        [
+                            8.6994444444,
+                            47.4741666667
+                        ],
+                        [
+                            8.620080876103575,
+                            47.43558311394371
+                        ],
+                        [
+                            8.5408333333,
+                            47.3969444444
+                        ],
+                        [
+                            8.5361111111,
+                            47.3636111111
+                        ],
+                        [
+                            8.5694444444,
+                            47.3194444444
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "c29916ec-1ea7-4fb6-acf4-8bfb0bb33b60",
+            "type": "Feature",
+            "properties": {
+                "identifier": "c29916ec-1ea7-4fb6-acf4-8bfb0bb33b60",
+                "country": "CHE",
+                "name": [
+                    {
+                        "text": "CTR ZURICH",
+                        "lang": "en-GB"
+                    }
+                ],
+                "type": "REQ_AUTHORIZATION",
+                "variant": "COMMON",
+                "message": [
+                        {
+                            "lang": "de-CH",
+                            "text": "Der Betrieb von unbemannten Luftfahrzeugen mit einem Gewicht von mehr als 250 g ist ab einer Höhe von 120 m über Grund nur mit Ausnahmebewilligung erlaubt."
+                        },
+                        {
+                            "lang": "fr-CH",
+                            "text": "L'exploitation d'aéronefs sans occupants d'un poids supérieur à 250 g n'est autorisée que avec une autorisation exceptionnelle à partir d'une hauteur de 120 m audessus du sol."
+                        },
+                        {
+                            "lang": "it-CH",
+                            "text": "L’esercizio di aeromobili senza occupanti di peso superiore a 250 g è consentito a partire da un’altezza di 120 m sopra il suolo solo con permesso d’esenzione."
+                        },
+                        {
+                            "lang": "en-GB",
+                            "text": "The operation of unmanned aircraft weighing more than 250 g is only permitted from an altitude of 120 m above ground with exemption permit."
+                        }
+                ],
+                "reason": [
+                    "AIR_TRAFFIC"
+                ],
+                "zoneAuthority": [
+                    {
+                        "name": [
+                            {
+                                "text": "Skyguide",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "service": [
+                            {
+                                "text": "Skyguide Special Flight Office",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "contactName": [
+                            {
+                                "text": "",
+                                "lang": "en-GB"
+                            }
+                        ],
+                        "siteURL": "https://skyguide.ch/services/special-flights",
+                        "purpose": "AUTHORIZATION"
+                    }
+                ],
+                "extendedProperties": {
+                    "addInfoText": [
+                        {
+                            "lang": "de-CH",
+                            "text": "Ausnahmebewilligungen können bei der zuständigen Stelle beantragt werden."
+                        },
+                        {
+                            "lang": "fr-CH",
+                            "text": "Des autorisations exceptionnelles peuvent être demandées auprès de l’autorité compétente."
+                        },
+                        {
+                            "lang": "it-CH",
+                            "text": "I permessi d’esenzione possono essere richiesti all’autorità competente."
+                        },
+                        {
+                            "lang": "en-GB",
+                            "text": "Exemption permits may be applied for at the competent authority."
+                        }
+                    ]
+                },
+                "limitedApplicability": [],
+                "layer": {
+                    "upper": 99999,
+                    "upperReference": "AGL",
+                    "lower": 120,
+                    "lowerReference": "AGL",
+                    "uom": "m"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            8.5361111111,
+                            47.3636111111
+                        ],
+                        [
+                            8.5694444444,
+                            47.3194444444
+                        ],
+                        [
+                            8.642747005213202,
+                            47.341690168946776
+                        ],
+                        [
+                            8.7161111111,
+                            47.3638888889
+                        ],
+                        [
+                            8.7233333333,
+                            47.3880555556
+                        ],
+                        [
+                            8.7408333333,
+                            47.3994444444
+                        ],
+                        [
+                            8.7594444444,
+                            47.4611111111
+                        ],
+                        [
+                            8.7688888889,
+                            47.4925
+                        ],
+                        [
+                            8.749166666700003,
+                            47.4961111111
+                        ],
+                        [
+                            8.737500000000002,
+                            47.5097222222
+                        ],
+                        [
+                            8.63925996288618,
+                            47.5596257026556
+                        ],
+                        [
+                            8.5408333333,
+                            47.6094444444
+                        ],
+                        [
+                            8.481666666700002,
+                            47.6033333333
+                        ],
+                        [
+                            8.4391666667,
+                            47.5888888889
+                        ],
+                        [
+                            8.3991666667,
+                            47.5688888889
+                        ],
+                        [
+                            8.3758333333,
+                            47.5527777778
+                        ],
+                        [
+                            8.3605555556,
+                            47.5361111111
+                        ],
+                        [
+                            8.3438888889,
+                            47.5122222222
+                        ],
+                        [
+                            8.3330555556,
+                            47.485
+                        ],
+                        [
+                            8.33819912332348,
+                            47.436944761983035
+                        ],
+                        [
+                            8.3433333333,
+                            47.3888888889
+                        ],
+                        [
+                            8.390555555600002,
+                            47.3644444444
+                        ],
+                        [
+                            8.463333906413382,
+                            47.364050881142006
+                        ],
+                        [
+                            8.5361111111,
+                            47.3636111111
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
 }
